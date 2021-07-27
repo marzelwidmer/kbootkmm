@@ -28,7 +28,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
                 // Kotlinx Date/Time
                 api("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
-                // Ktor
+                // TODO: 27.07.21 Ktor - commonMain
                 implementation("io.ktor:ktor-client-core:1.6.1")
                 implementation("io.ktor:ktor-client-json:1.6.1")
                 implementation("io.ktor:ktor-client-logging:1.6.1")
@@ -55,7 +55,7 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                // Ktor
+                // TODO: 27.07.21 Ktor iosMain
                 implementation("io.ktor:ktor-client-ios:1.6.1")
             }
         }
