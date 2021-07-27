@@ -25,7 +25,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // Coroutines
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3-native-mt")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
                 // Kotlinx Date/Time
                 api("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
                 // Ktor
@@ -40,12 +40,10 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
-                // kluent
-                implementation("org.amshove.kluent:kluent:1.65")
             }
         }
         val androidMain by getting {
-            dependencies{
+            dependencies {
                 // Ktor
                 implementation("io.ktor:ktor-client-android:1.6.1")
             }
@@ -61,7 +59,9 @@ kotlin {
                 implementation("io.ktor:ktor-client-ios:1.6.1")
             }
         }
-        val iosTest by getting
+        val iosTest by getting {
+
+        }
     }
 }
 

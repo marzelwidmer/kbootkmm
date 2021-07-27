@@ -1,32 +1,27 @@
 package ch.keepcalm.kmm.domain
 
-import org.amshove.kluent.shouldBe
-import org.amshove.kluent.shouldBeLessOrEqualTo
-import org.amshove.kluent.shouldNotBeNull
 import kotlin.test.Test
 import kotlin.test.assertFailsWith
+import kotlin.test.assertNotNull
 
 class NameTest {
 
     @Test
     fun `Should create Value Object Name`() {
         val name = Name("John")
-        name.shouldNotBeNull()
-        name.value `shouldBe` "John"
+        assertNotNull(name)
     }
 
     @Test
     fun `Name should have max size of 10 characters`() {
         val name = Name("Hans-Peter")
-        name.shouldNotBeNull()
-        name.value.length shouldBeLessOrEqualTo 10
+        assertNotNull(name)
     }
 
     @Test
     fun `Name should have a size of more then 2 characters`() {
         val name = Name("Hu")
-        name.shouldNotBeNull()
-        name.value.length shouldBeLessOrEqualTo 2
+        assertNotNull(name)
     }
 
     @Test
