@@ -22,21 +22,45 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                // Coroutines
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3-native-mt")
+                // Kotlinx Date/Time
+                api("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
+                // Ktor
+                implementation("io.ktor:ktor-client-core:1.6.1")
+                implementation("io.ktor:ktor-client-json:1.6.1")
+                implementation("io.ktor:ktor-client-logging:1.6.1")
+                implementation("io.ktor:ktor-client-serialization:1.6.1")
+            }
+
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                // kluent
                 implementation("org.amshove.kluent:kluent:1.65")
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies{
+                // Ktor
+                implementation("io.ktor:ktor-client-android:1.6.1")
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
             }
         }
-        val iosMain by getting
+        val iosMain by getting {
+            dependencies {
+                // Ktor
+                implementation("io.ktor:ktor-client-ios:1.6.1")
+            }
+        }
         val iosTest by getting
     }
 }
