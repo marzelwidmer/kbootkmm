@@ -8,7 +8,7 @@ dependencies {
     implementation(project(":shared"))
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
     // TODO: 27.07.21 Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
@@ -17,7 +17,7 @@ dependencies {
 android {
     // TODO: 27.07.21
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-rc01"
+        kotlinCompilerExtensionVersion = "1.0.0"
     }
     kotlinOptions {
         suppressWarnings = true
